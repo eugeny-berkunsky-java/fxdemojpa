@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.Controller">
+   <top>
+       <VBox prefHeight="63.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+           <MenuBar>
+               <Menu mnemonicParsing="false" text="File">
+                   <MenuItem mnemonicParsing="false" text="Close" />
+               </Menu>
+               <Menu mnemonicParsing="false" text="Edit">
+                   <MenuItem mnemonicParsing="false" text="Delete" />
+               </Menu>
+               <Menu mnemonicParsing="false" text="Help">
+                   <MenuItem mnemonicParsing="false" text="About" />
+               </Menu>
+           </MenuBar>
+           <ToolBar prefHeight="40.0" prefWidth="200.0" />
+       </VBox>
+   </top>
+   <left>
+      <ListView fx:id="facultyList" prefHeight="337.0" prefWidth="155.0" BorderPane.alignment="CENTER" />
+   </left>
+   <center>
+      <TableView fx:id="studentTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="50.0" text="№" />
+          <TableColumn fx:id="nameColumn" prefWidth="250.0" text="Name" />
+          <TableColumn fx:id="ratingColumn" prefWidth="50.0" text="Rating" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>

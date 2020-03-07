@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="fxdemo@localhost" uuid="2304363d-8abf-4435-8d38-c1b83f608414">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/fxdemo</jdbc-url>
+      <driver-properties>
+        <property name="createDatabaseIfNotExist" value="true" />
+      </driver-properties>
+    </data-source>
+  </component>
+</project>
