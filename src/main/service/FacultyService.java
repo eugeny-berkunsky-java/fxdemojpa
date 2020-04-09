@@ -23,4 +23,26 @@ public class FacultyService {
                 em.createQuery("select f from Faculty f where f.id=:fid", Faculty.class).setParameter("fid", facultyId).getSingleResult().getStudents()
         );
     }
+
+    public void addFaculty(String facultyName) {
+        Faculty faculty = new Faculty();
+        faculty.setName(facultyName);
+        em.getTransaction().begin();
+        try {
+            em.persist(faculty);
+            em.getTransaction().commit();
+        } catch (Exception ex) {
+            System.err.println("Can't add");
+        }
+    }
+
+    public void deleteFaculty(Faculty faculty) {
+        em.getTransaction().begin();
+        try {
+            em.remove(faculty);
+            em.getTransaction().commit();
+        } catch (Exception ex) {
+            System.err.println("Can't delete");
+        }
+    }
 }

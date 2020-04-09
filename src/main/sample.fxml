@@ -17,7 +17,12 @@
                    <MenuItem mnemonicParsing="false" text="About" />
                </Menu>
            </MenuBar>
-           <ToolBar prefHeight="40.0" prefWidth="200.0" />
+           <ToolBar prefHeight="40.0" prefWidth="200.0">
+               <Label text="Факультет" />
+               <TextField fx:id="facultyField" />
+               <Button mnemonicParsing="false" onAction="#addFaculty" text="Добавить" />
+               <Button mnemonicParsing="false" onAction="#deleteFaculty" text="Удалить" />
+           </ToolBar>
        </VBox>
    </top>
    <left>
@@ -32,4 +37,12 @@
         </columns>
       </TableView>
    </center>
+   <bottom>
+       <ToolBar prefHeight="34.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+           <TextField fx:id="nameField"/>
+           <TextField fx:id="ratingField" prefHeight="26.0" prefWidth="94.0"/>
+           <Button onAction="#addStudent" mnemonicParsing="false" text="Добавить"/>
+           <Button onAction="#deleteStudent" mnemonicParsing="false" text="Удалить"/>
+       </ToolBar>
+   </bottom>
 </BorderPane>
